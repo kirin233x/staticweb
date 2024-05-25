@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deeplink Test</title>
+</head>
+<body>
+    <h1>Deeplink Test</h1>
+    <p>Click the links below to test the deeplinks:</p>
+
+    <h2>No Parameters</h2>
+    <a href="motor://app.huawei.motor">Open HarmonyOS App (No Parameters)</a>
+
+    <h2>Path and No Parameters</h2>
+    <a href="motor://app.huawei.motor/open">Open HarmonyOS App (Path and No Parameters)</a>
+
+    <h2>No Path and Single Parameter</h2>
+    <a href="motor://app.huawei.motor?param1=value1">Open HarmonyOS App (No Path and Single Parameter)</a>
+
+    <h2>Path and Single Parameter</h2>
+    <a href="motor://app.huawei.motor/open?param1=value1">Open HarmonyOS App (Path and Single Parameter)</a>
+
+    <h2>No Path and Multiple Parameters</h2>
+    <a href="motor://app.huawei.motor?param1=value1&param2=value2">Open HarmonyOS App (No Path and Multiple Parameters)</a>
+
+    <h2>Path and Multiple Parameters</h2>
+    <a href="motor://app.huawei.motor/open?param1=value1&param2=value2">Open HarmonyOS App (Path and Multiple Parameters)</a>
+
+    <h2>No Path and Single Parameter with Special Characters</h2>
+    <a href="motor://app.huawei.motor?param1=value%201">Open HarmonyOS App (No Path and Single Parameter with Special Characters)</a>
+
+    <h2>Path and Single Parameter with Special Characters</h2>
+    <a href="motor://app.huawei.motor/open?param1=value%201">Open HarmonyOS App (Path and Single Parameter with Special Characters)</a>
+
+    <h2>No Path and Multiple Parameters with Special Characters</h2>
+    <a href="motor://app.huawei.motor?param1=value%201&param2=value%202">Open HarmonyOS App (No Path and Multiple Parameters with Special Characters)</a>
+
+    <h2>Path and Multiple Parameters with Special Characters</h2>
+    <a href="motor://app.huawei.motor/open?param1=value%201&param2=value%202">Open HarmonyOS App (Path and Multiple Parameters with Special Characters)</a>
+
+    <h2>Open Deeplink using Button</h2>
+    <button onclick="openDeeplink('motor://app.huawei.motor')">Open Deeplink (No Parameters)</button>
+    <button onclick="openDeeplink('motor://app.huawei.motor/open')">Open Deeplink (Path and No Parameters)</button>
+    <button onclick="openDeeplink('motor://app.huawei.motor?param1=value1')">Open Deeplink (No Path and Single Parameter)</button>
+    <button onclick="openDeeplink('motor://app.huawei.motor/open?param1=value1')">Open Deeplink (Path and Single Parameter)</button>
+    <button onclick="openDeeplink('motor://app.huawei.motor?param1=value1&param2=value2')">Open Deeplink (No Path and Multiple Parameters)</button>
+    <button onclick="openDeeplink('motor://app.huawei.motor/open?param1=value1&param2=value2')">Open Deeplink (Path and Multiple Parameters)</button>
+
+    <script>
+        function openDeeplink(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
